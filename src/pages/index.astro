@@ -5,16 +5,18 @@ import { getCollection } from "astro:content";
 import dayjs from "dayjs";
 import Button from "../components/Button.astro";
 
-const projects = (await getCollection("projects")).sort((a, b) => {
-	if (a.data.order === b.data.order) {
-		const aDate = dayjs(a.data.creationDate);
-		const bDate = dayjs(b.data.creationDate);
-		return bDate - aDate;
-	}
-	return a.data.order - b.data.order;
-});
-const MAX_PROJECTS = 4;
-const shownProjects = projects.slice(0, MAX_PROJECTS - 1);
+// const projects = (await getCollection("projects")).sort((a, b) => {
+// 	if (a.data.order === b.data.order) {
+// 		const aDate = dayjs(a.data.creationDate);
+// 		const bDate = dayjs(b.data.creationDate);
+// 		return bDate - aDate;
+// 	}
+// 	return a.data.order - b.data.order;
+// });
+// const MAX_PROJECTS = 4;
+// const shownProjects = projects.slice(0, MAX_PROJECTS - 1);
+
+
 // const lastProject = projects[MAX_PROJECTS - 1];
 ---
 
@@ -30,26 +32,25 @@ const shownProjects = projects.slice(0, MAX_PROJECTS - 1);
 			<text class="text-lg">
 				I am currently doing a <b>Bachelor's degree</b> at <a
 					href="https://www.sae.edu/ch-ge/"><b>SAE Institute</b></a
-				> and working on other projects on the side.<br />
-				
+				> and working on other projects on the side such as 3D character concepts and game ready assets.<br />
 			</text>
 		</div>
 		<br />
-		<div class="text-2xl w-full mb-2">
+		<!-- <div class="text-2xl w-full mb-2">
 			<b>Use the buttons below to see</b>
-		</div>
+		</div> -->
 		<br />
 		<div class="flex">
-			<Button href="https://YoyoJaneiro.github.io/projects">
+			<!-- <Button href="https://YoyoJaneiro.github.io/projects">
 				Projects
-			</Button>
-			<Button href="https://YoyoJaneiro.github.io/cv">CV</Button>
+			</Button> -->
+			<!-- <Button href="https://YoyoJaneiro.github.io/cv">CV</Button> -->
 		</div>
 	</div>
 	<br />
 	<div>
-		<div class="text-3xl w-full font-bold mb-2">Last projects</div>
-	</div>
+		<!-- <div class="text-3xl w-full font-bold mb-2">Last projects</div> -->
+	<!-- </div>
 	{
 		shownProjects.map((project) => (
 			<>
@@ -63,9 +64,9 @@ const shownProjects = projects.slice(0, MAX_PROJECTS - 1);
 				<div class="divider my-0" />
 			</>
 		))
-	}
+	} -->
 
-	<div class="mt-8">
+	<!-- <div class="mt-8">
 		<a class="btn btn-outline ml-5" href="/projects">See more...</a>
-	</div>
+	</div> -->
 </BaseLayout>
