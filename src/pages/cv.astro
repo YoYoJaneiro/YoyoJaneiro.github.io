@@ -1,6 +1,7 @@
  ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
+import Button from "../components/Button.astro";
 ---
 <style>
   a {
@@ -8,7 +9,14 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   }
 </style>
 
+
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
+  
+  <!-- <div class="flex">
+    <Button href="/pdf/main.pdf">PDF Version</Button>
+  </div>
+  &nbsp; -->
+
   <div class="mb-5">
     <div class="mb-5">
       <div class="text-3xl w-full font-bold">Education</div>
